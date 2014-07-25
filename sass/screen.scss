@@ -1,0 +1,166 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+$blue: #1297ff;
+
+body,
+html{
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans GB", "Heiti SC" , "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑","sans-serif";
+	font-size: 62.5%;
+}
+
+.form-wrapper{
+	width: 320px;
+	padding: 1rem;
+	@include box-sizing(border-box);
+	margin: 0 auto;
+	margin-top: 4rem;
+	position: relative;
+
+	p{
+		font-size: 1.5rem;
+		color: #666;
+		line-height: 2.1rem;
+	}
+
+}
+
+input,
+.js-float-select-status{
+	display: block;
+	width: 100%;
+	border: 1px solid #eee;
+	margin: 1rem 0;
+	padding: 1rem;
+	color: #aaa;
+	@include font-size(2);
+	@include box-sizing(border-box);
+	@include appearance(none);
+	@include border-radius(0);
+
+	&:hover{
+		border-color: #ccc;
+	}
+}
+
+.float-lable {
+	@include font-size(1);
+	color: #aaa;
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid #ccc;
+	color: #333;
+	-webkit-outline: none;
+	-moz-outline: none;
+	outline: none;
+}
+
+.js-float-label-wrapper.focused label,
+.js-float-label-wrapper.focused.populated label,
+.js-float-option-wrapper.focus label,
+.js-float-option-wrapper.focus.populated label{
+	color: $blue;
+}
+.js-float-label-wrapper.populated label,
+.js-float-option-wrapper.populated label{
+	color: #666;
+}
+
+.js-float-label-wrapper.focused input,
+.js-float-label-wrapper.focused.populated input,
+.js-float-label-wrapper.populated input,
+.js-float-option-wrapper.populated .js-float-select-status{
+	color: #333;
+}
+
+.js-float-label-wrapper.error input,
+.js-float-option-wrapper.error .js-float-select-status{
+	border-color: #fc333f;
+}
+
+.js-float-label-wrapper {
+	position: relative;
+}
+
+.js-float-label-wrapper label,
+.js-float-option-wrapper label{
+	position: absolute;
+	top: 1rem; left: 1rem;
+	opacity: 0;
+	@include transform(translate3d(0,0.2rem,0));
+	color: #666;
+	font-weight: bold;
+}
+
+.js-float-label-wrapper.focused label,
+.js-float-label-wrapper.populated label,
+.js-float-option-wrapper.focus label,
+.js-float-option-wrapper.populated label{
+	opacity: 1;
+	@include transform(translate3d(0,0,0));
+}
+
+.js-float-label-wrapper.focused input,
+.js-float-label-wrapper.populated input,
+.js-float-label-wrapper.focused textarea,
+.js-float-label-wrapper.populated textarea,
+.js-float-option-wrapper.focus .js-float-select-status,
+.js-float-option-wrapper.populated .js-float-select-status{
+	padding-top: 2.5rem;
+}
+
+.js-float-label-wrapper input,
+.js-float-label-wrapper textarea,
+.js-float-label-wrapper label,
+.js-float-option-wrapper .js-float-select-status{
+	@include transition(0.1s ease-out);
+}
+
+
+.js-float-option-wrapper{
+	position: relative;
+	select{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 45px;
+		line-height: 45px;
+		background-color: transparent;
+		opacity: 0;
+	}
+
+	label{
+		@include font-size(1);
+	}
+
+	.js-float-select-status{
+		line-height: 2.3rem;
+	}
+}
+
+#send{
+	background-color: white;
+	border-color: $blue;
+	color: $blue;
+	@include transition(0.1s ease-out);
+	&:hover{
+		background-color: #d1ecff;
+	}
+	&:active{
+		background-color: $blue;
+		color: white;
+	}
+}
+
