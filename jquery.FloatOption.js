@@ -29,24 +29,16 @@
 
 			select.focus(function(){
 				element.addClass("focus");
-				if (select[0].selectedIndex == 0) {
+				if ($(this)[0].selectedIndex == 0) {
 					optionsValue.text(options.eq(0).text());
 				};
 			})
 
 			select.blur(function(){
 				element.removeClass("focus");
-				if (select[0].selectedIndex == 0) {
+				if ($(this)[0].selectedIndex == 0) {
 					optionsValue.text(label.text());
 				};
-			})
-
-			select.on("focus mouseenter",function(){
-				optionsValue.css({"border-color":"#ccc"});
-			})
-
-			select.on("blur mouseleave",function(){
-				optionsValue.removeAttr("style");
 			})
 
 		});

@@ -19,16 +19,28 @@ html{
 	font-size: 62.5%;
 }
 
+a{
+	color: $blue;
+	text-decoration: none;
+}
+
+.form-title{
+	@include font-size(2.4);
+	text-align: center;
+	margin-bottom: 30px;
+	color: $blue;
+}
+
 .form-wrapper{
 	width: 320px;
-	padding: 1rem;
+	padding: 10px;
 	@include box-sizing(border-box);
 	margin: 0 auto;
-	margin-top: 4rem;
+	margin-top: 40px;
 	position: relative;
 
 	p{
-		font-size: 1.5rem;
+		@include font-size(1.5);
 		color: #666;
 		line-height: 2.1rem;
 	}
@@ -36,12 +48,12 @@ html{
 }
 
 input,
-.js-float-select-status{
+.js-float-option-wrapper{
 	display: block;
 	width: 100%;
 	border: 1px solid #eee;
-	margin: 1rem 0;
-	padding: 1rem;
+	margin: 10px 0;
+	padding: 10px;
 	color: #aaa;
 	@include font-size(2);
 	@include box-sizing(border-box);
@@ -97,9 +109,9 @@ textarea:focus {
 .js-float-label-wrapper label,
 .js-float-option-wrapper label{
 	position: absolute;
-	top: 1rem; left: 1rem;
+	top: 10px; left: 10px;
 	opacity: 0;
-	@include transform(translate3d(0,0.2rem,0));
+	@include transform(translate3d(0,2px,0));
 	color: #666;
 	font-weight: bold;
 }
@@ -115,16 +127,18 @@ textarea:focus {
 .js-float-label-wrapper.focused input,
 .js-float-label-wrapper.populated input,
 .js-float-label-wrapper.focused textarea,
-.js-float-label-wrapper.populated textarea,
+.js-float-label-wrapper.populated textarea{
+	padding-top: 25px;
+}
 .js-float-option-wrapper.focus .js-float-select-status,
 .js-float-option-wrapper.populated .js-float-select-status{
-	padding-top: 2.5rem;
+	padding-top: 15px;
 }
 
 .js-float-label-wrapper input,
 .js-float-label-wrapper textarea,
 .js-float-label-wrapper label,
-.js-float-option-wrapper .js-float-select-status{
+.js-float-option-wrapper{
 	@include transition(0.1s ease-out);
 }
 
@@ -135,7 +149,7 @@ textarea:focus {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		height: 45px;
+		height: 56px;
 		line-height: 45px;
 		background-color: transparent;
 		opacity: 0;
@@ -146,7 +160,29 @@ textarea:focus {
 	}
 
 	.js-float-select-status{
-		line-height: 2.3rem;
+		line-height: 23px;
+	}
+}
+
+.reason-description{
+	border-top: 1px solid #ddd;
+	margin-top: 6px;
+	@include font-size(1.2);
+	line-height: 16px;
+	display: none;
+	p{
+		font-size: 12px;
+		line-height: 16px;
+		margin-top: 8px;
+	}
+	ol{
+		list-style-type: disc;
+		list-style-position: outside;
+		padding-left: 16px;
+		color: #aaa;
+	}
+	li{
+		margin-top: 6px;
 	}
 }
 
