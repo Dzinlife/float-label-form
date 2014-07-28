@@ -56,14 +56,22 @@ textarea,
 	margin: 10px 0;
 	padding: 10px;
 	color: #aaa;
-	line-height: 21px !important;
 	@include font-size(2);
 	@include box-sizing(border-box);
 	@include appearance(none);
-	@include border-radius(0);
 
 	&:hover{
 		border-color: #ccc;
+	}
+}
+
+@-moz-document url-prefix() {
+	input,
+	textarea{
+		padding-top: 13px;
+	}
+	#send{
+		padding-top: 10px;
 	}
 }
 
@@ -159,6 +167,8 @@ textarea:focus {
 
 	label{
 		@include font-size(1);
+		position: absolute;
+		top: 5px;
 	}
 
 	.js-float-select-status{
