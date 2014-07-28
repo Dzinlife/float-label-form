@@ -271,14 +271,13 @@ textarea:focus {
   font-size: 10px;
   font-size: 1rem;
   position: absolute;
-  top: 5px;
 }
-/* line 174, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .js-float-option-wrapper .js-float-select-status {
   line-height: 23px;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .reason-description {
   border-top: 1px solid #ddd;
   margin-top: 6px;
@@ -287,25 +286,25 @@ textarea:focus {
   line-height: 16px;
   display: none;
 }
-/* line 185, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .reason-description p {
   font-size: 12px;
   line-height: 16px;
   margin-top: 8px;
 }
-/* line 190, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .reason-description ol {
   list-style-type: disc;
   list-style-position: outside;
   padding-left: 16px;
   color: #aaa;
 }
-/* line 196, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 .reason-description li {
   margin-top: 6px;
 }
 
-/* line 201, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 #send {
   background-color: white;
   border-color: #1297ff;
@@ -315,11 +314,11 @@ textarea:focus {
   -o-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
 }
-/* line 206, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 #send:hover {
   background-color: #d1ecff;
 }
-/* line 209, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 #send:active {
   background-color: #1297ff;
   color: white;
