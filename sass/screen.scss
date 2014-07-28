@@ -48,6 +48,7 @@ a{
 }
 
 input,
+textarea,
 .js-float-option-wrapper{
 	display: block;
 	width: 100%;
@@ -55,6 +56,7 @@ input,
 	margin: 10px 0;
 	padding: 10px;
 	color: #aaa;
+	line-height: 21px !important;
 	@include font-size(2);
 	@include box-sizing(border-box);
 	@include appearance(none);
