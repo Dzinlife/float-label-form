@@ -298,7 +298,7 @@ textarea:focus {
   list-style-type: disc;
   list-style-position: outside;
   padding-left: 16px;
-  color: #aaa;
+  color: #888;
 }
 /* line 196, ../sass/screen.scss */
 .reason-description li {
