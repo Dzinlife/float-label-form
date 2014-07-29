@@ -12,11 +12,11 @@
 				label = element.find("label"),
 				select = element.find("select");
 				options = element.find("option");
+				optionsValue = $("<div class='js-float-select-status'></div>").prependTo(element);
 
-			var optionsValue = $("<div class='js-float-select-status'></div>").prependTo(element);
 			optionsValue.text(label.text());
 
-			var optionsContainer = $("<div class='float-option-container'></div>").appendTo(element).hide();
+			// var optionsContainer = $("<div class='float-option-container'></div>").appendTo(element).hide();
 
 			element.click(function() {
 				select.focus();
