@@ -68,20 +68,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 body,
 html {
   font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans GB", "Heiti SC" , "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑","sans-serif";
   font-size: 62.5%;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 a {
   color: #1297ff;
   text-decoration: none;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .form-title {
   font-size: 24px;
   font-size: 2.4rem;
@@ -90,7 +90,7 @@ a {
   color: #1297ff;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .form-wrapper {
   width: 320px;
   padding: 10px;
@@ -101,7 +101,7 @@ a {
   margin-top: 40px;
   position: relative;
 }
-/* line 42, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .form-wrapper p {
   font-size: 15px;
   font-size: 1.5rem;
@@ -109,7 +109,7 @@ a {
   line-height: 2.1rem;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 input,
 textarea,
 .js-float-option-wrapper {
@@ -129,7 +129,7 @@ textarea,
   -moz-appearance: none;
   appearance: none;
 }
-/* line 64, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 input:hover,
 textarea:hover,
 .js-float-option-wrapper:hover {
@@ -137,26 +137,34 @@ textarea:hover,
 }
 
 @-moz-document url-prefix() {
-  /* line 71, ../sass/screen.scss */
+  /* line 72, ../sass/screen.scss */
   input,
   textarea {
     padding-top: 13px;
   }
 
-  /* line 74, ../sass/screen.scss */
+  /* line 75, ../sass/screen.scss */
   #send {
     padding-top: 10px;
   }
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
+.error-message {
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #fc333f;
+  display: none;
+}
+
+/* line 86, ../sass/screen.scss */
 .float-lable {
-  font-size: 10px;
-  font-size: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   color: #aaa;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 input:focus,
 textarea:focus {
   border: 1px solid #ccc;
@@ -166,7 +174,7 @@ textarea:focus {
   outline: none;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .js-float-label-wrapper.focused label,
 .js-float-label-wrapper.focused.populated label,
 .js-float-option-wrapper.focus label,
@@ -174,13 +182,13 @@ textarea:focus {
   color: #1297ff;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .js-float-label-wrapper.populated label,
 .js-float-option-wrapper.populated label {
   color: #666;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .js-float-label-wrapper.focused input,
 .js-float-label-wrapper.focused.populated input,
 .js-float-label-wrapper.populated input,
@@ -188,18 +196,23 @@ textarea:focus {
   color: #333;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .js-float-label-wrapper.error input,
 .js-float-option-wrapper.error .js-float-select-status {
   border-color: #fc333f;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
+.js-float-label-wrapper.error .error-message {
+  display: block;
+}
+
+/* line 129, ../sass/screen.scss */
 .js-float-label-wrapper {
   position: relative;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .js-float-label-wrapper label,
 .js-float-option-wrapper label {
   position: absolute;
@@ -215,7 +228,7 @@ textarea:focus {
   font-weight: bold;
 }
 
-/* line 133, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .js-float-label-wrapper.focused label,
 .js-float-label-wrapper.populated label,
 .js-float-option-wrapper.focus label,
@@ -228,7 +241,7 @@ textarea:focus {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .js-float-label-wrapper.focused input,
 .js-float-label-wrapper.populated input,
 .js-float-label-wrapper.focused textarea,
@@ -236,13 +249,13 @@ textarea:focus {
   padding-top: 25px;
 }
 
-/* line 145, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .js-float-option-wrapper.focus .js-float-select-status,
 .js-float-option-wrapper.populated .js-float-select-status {
   padding-top: 15px;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 .js-float-label-wrapper input,
 .js-float-label-wrapper textarea,
 .js-float-label-wrapper label,
@@ -253,11 +266,11 @@ textarea:focus {
   transition: 0.1s ease-out;
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .js-float-option-wrapper {
   position: relative;
 }
-/* line 159, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .js-float-option-wrapper select {
   position: absolute;
   top: 0;
@@ -267,18 +280,18 @@ textarea:focus {
   background-color: transparent;
   opacity: 0;
 }
-/* line 169, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .js-float-option-wrapper label {
-  font-size: 10px;
-  font-size: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   position: absolute;
 }
-/* line 174, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .js-float-option-wrapper .js-float-select-status {
   line-height: 23px;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .reason-description {
   border-top: 1px solid #ddd;
   margin-top: 6px;
@@ -287,25 +300,25 @@ textarea:focus {
   line-height: 16px;
   display: none;
 }
-/* line 185, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .reason-description p {
   font-size: 12px;
   line-height: 16px;
   margin-top: 8px;
 }
-/* line 190, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .reason-description ol {
   list-style-type: disc;
   list-style-position: outside;
   padding-left: 16px;
   color: #888;
 }
-/* line 196, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .reason-description li {
   margin-top: 6px;
 }
 
-/* line 201, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 #send {
   background-color: white;
   border-color: #1297ff;
@@ -315,11 +328,11 @@ textarea:focus {
   -o-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
 }
-/* line 206, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 #send:hover {
   background-color: #d1ecff;
 }
-/* line 209, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 #send:active {
   background-color: #1297ff;
   color: white;

@@ -12,6 +12,7 @@
 }
 
 $blue: #1297ff;
+$red: #fc333f;
 
 body,
 html{
@@ -76,8 +77,14 @@ textarea,
 	}
 }
 
+.error-message{
+	@include font-size(1.2);
+	color: $red;
+	display: none;
+}
+
 .float-lable {
-	@include font-size(1);
+	@include font-size(1.2);
 	color: #aaa;
 }
 
@@ -110,8 +117,14 @@ textarea:focus {
 
 .js-float-label-wrapper.error input,
 .js-float-option-wrapper.error .js-float-select-status{
-	border-color: #fc333f;
+	border-color: $red;
 }
+
+
+.js-float-label-wrapper.error .error-message{
+	display: block;
+}
+
 
 .js-float-label-wrapper {
 	position: relative;
@@ -167,7 +180,7 @@ textarea:focus {
 	}
 
 	label{
-		@include font-size(1);
+		@include font-size(1.2);
 		position: absolute;
 	}
 
