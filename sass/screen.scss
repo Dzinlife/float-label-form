@@ -153,7 +153,8 @@ textarea{
 .js-float-option-wrapper label{
 	position: absolute;
 	top: 10px; left: 10px;
-	opacity: 0;
+	// opacity: 0;
+	@include opacity(0);
 	@include transform(translate3d(0,2px,0));
 	color: #666;
 	font-weight: bold;
@@ -163,7 +164,8 @@ textarea{
 .js-float-label-wrapper.populated label,
 .js-float-option-wrapper.focus label,
 .js-float-option-wrapper.populated label{
-	opacity: 1;
+	// opacity: 1;
+	@include opacity(1);
 	@include transform(translate3d(0,0,0));
 }
 
@@ -191,6 +193,7 @@ textarea{
 	select{
 		position: absolute;
 		top: 0;
+		left: 0;
 		width: 100%;
 		height: 56px;
 		line-height: 45px;
