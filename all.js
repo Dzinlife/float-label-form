@@ -10,7 +10,7 @@ $(document).ready(function() {
 	});
 
 	$("input, select").focus(function(){
-		$(this).parent(".js-float-label-wrapper ,js-float-option-wrapper").removeClass("error");
+		$(this).parent(".js-float-label-wrapper ,.js-float-option-wrapper").removeClass("error");
 	})
 
 	$("select").change(function(){
