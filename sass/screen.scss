@@ -18,6 +18,7 @@ body,
 html{
 	font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans GB", "Heiti SC" , "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑","sans-serif";
 	font-size: 62.5%;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 a{
@@ -95,6 +96,8 @@ textarea{
 	@include font-size(1.2);
 	color: $red;
 	display: none;
+	position: relative;
+	margin-top: -3px;
 }
 
 .float-lable {
@@ -129,6 +132,7 @@ textarea{
 .js-float-label-wrapper.error input,
 .js-float-option-wrapper.error{
 	border-color: $red;
+	position: relative;
 }
 
 .js-float-label-placeholder{
@@ -140,7 +144,8 @@ textarea{
 	left: 10px;
 }
 
-.js-float-label-wrapper.error .error-message,{
+.js-float-label-wrapper.error .error-message,
+.js-float-option-wrapper.error +.error-message{
 	display: block;
 }
 
@@ -174,6 +179,7 @@ textarea{
 .js-float-label-wrapper.focused textarea,
 .js-float-label-wrapper.populated textarea{
 	padding-top: 25px;
+	padding-bottom: 5px;
 }
 .js-float-option-wrapper.focus .js-float-select-status,
 .js-float-option-wrapper.populated .js-float-select-status{
