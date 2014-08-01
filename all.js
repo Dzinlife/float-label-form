@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	FastClick.attach(document.body);
+	
 	$(".js-float-label-wrapper").FloatLabel();
 	$(".js-float-option-wrapper").FloatSelect();
 

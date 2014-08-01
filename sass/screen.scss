@@ -201,7 +201,7 @@ textarea{
 .js-float-label-wrapper input,
 .js-float-label-wrapper textarea,
 .js-float-label-wrapper label{
-	@include transition(0.2s ease-in-out);
+	@include transition(0.2s ease-out);
 }
 
 
@@ -258,7 +258,7 @@ textarea{
 	line-height: 26px;
 	text-align: center;
 	cursor: pointer;
-	@include transition(0.2s ease-in-out);
+	@include transition(0.2s ease-out);
 	&:hover{
 		background-color: #d1ecff;
 	}
