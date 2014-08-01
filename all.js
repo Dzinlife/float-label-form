@@ -47,11 +47,11 @@ $(document).ready(function() {
 			}
 		},
 		"email": function () {
-			if (!validateEmail($("#form-email").val())) {
+			if (validateEmail($("#form-email").val()) || $("#form-email").val() == "") {
+				return true;
+			}else{
 				$("#form-email").parent().addClass("error");
 				return false;
-			}else{
-				return true;
 			}
 
 			function validateEmail(email) { 
@@ -59,16 +59,24 @@ $(document).ready(function() {
 				return regex.test(email);
 			}
 		},
-		"orderNumber": function () {
-			if (!validateOrderNumber($("#form-order-number").val())) {
+		"number": function () {
+			if (validateOrderNumber($("#form-order-number").val()) || validateSNNumber($("#form-order-number").val())) {
+				return true;
+			}else{
 				$("#form-order-number").parent().addClass("error");
 				return false;
-			}else{
-				return true;
 			}
 
 			function validateOrderNumber(number) {
 				if (number.length >= 18 && number.length <= 20) {
+					return true;
+				}else{
+					return false;
+				}
+			}
+
+			function validateSNNumber(number) {
+				if (number.length == 12) {
 					return true;
 				}else{
 					return false;
@@ -98,7 +106,7 @@ $(document).ready(function() {
 	});
 
 	$("#form-order-number").blur(function(){
-		validate.orderNumber();	
+		validate.number();	
 	});
 
 	$("#form-reason").blur(function(){

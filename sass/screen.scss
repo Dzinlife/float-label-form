@@ -34,11 +34,12 @@ a{
 }
 
 .form-wrapper{
-	width: 320px;
+	max-width: 480px;
+	min-width: 320px;
 	padding: 10px;
 	@include box-sizing(border-box);
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 30px;
 	position: relative;
 
 	p{
@@ -124,6 +125,11 @@ textarea{
 	color: #333;
 }
 
+.js-float-label-wrapper.focused input,
+.js-float-option-wrapper.focus {
+	border-color: $blue;
+}
+
 .js-float-label-wrapper.focused .js-float-label-placeholder,
 .js-float-label-wrapper.focused.populated .js-float-label-placeholder,
 .js-float-label-wrapper.populated .js-float-label-placeholder,{
@@ -159,7 +165,6 @@ textarea{
 .js-float-option-wrapper label{
 	position: absolute;
 	top: 10px; left: 10px;
-	// opacity: 0;
 	@include opacity(0);
 	@include transform(translate3d(0,2px,0));
 	color: #666;
@@ -170,7 +175,6 @@ textarea{
 .js-float-label-wrapper.populated label,
 .js-float-option-wrapper.focus label,
 .js-float-option-wrapper.populated label{
-	// opacity: 1;
 	@include opacity(1);
 	@include transform(translate3d(0,0,0));
 }
