@@ -262,11 +262,15 @@ textarea:focus {
   -ms-transform: translate3d(0, 2px, 0);
   -o-transform: translate3d(0, 2px, 0);
   transform: translate3d(0, 2px, 0);
+  -webkit-transition: 0.2s ease-out !important;
+  -moz-transition: 0.2s ease-out !important;
+  -o-transition: 0.2s ease-out !important;
+  transition: 0.2s ease-out !important;
   color: #666;
   font-weight: bold;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .js-float-label-wrapper.focused label,
 .js-float-label-wrapper.populated label,
 .js-float-option-wrapper.focus label,
@@ -280,22 +284,22 @@ textarea:focus {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 185, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .js-float-label-wrapper.focused input,
 .js-float-label-wrapper.populated input,
 .js-float-label-wrapper.focused textarea,
 .js-float-label-wrapper.populated textarea {
   padding-top: 25px;
-  padding-bottom: 5px;
+  padding-bottom: 7px;
 }
 
-/* line 191, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .js-float-option-wrapper.populated,
 .js-float-option-wrapper.focus {
   padding-bottom: 5px;
 }
 
-/* line 196, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .js-float-option-wrapper.focus .js-float-select-status,
 .js-float-option-wrapper.populated .js-float-select-status {
   padding-top: 15px;
@@ -304,12 +308,11 @@ textarea:focus {
 /* line 203, ../sass/screen.scss */
 .js-float-label-wrapper input,
 .js-float-label-wrapper textarea,
-.js-float-label-wrapper label,
-.js-float-option-wrapper {
-  -webkit-transition: 0.1s ease-out;
-  -moz-transition: 0.1s ease-out;
-  -o-transition: 0.1s ease-out;
-  transition: 0.1s ease-out;
+.js-float-label-wrapper label {
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 /* line 208, ../sass/screen.scss */
@@ -373,17 +376,51 @@ textarea:focus {
   height: 46px;
   line-height: 26px;
   text-align: center;
-  -webkit-transition: 0.1s ease-out;
-  -moz-transition: 0.1s ease-out;
-  -o-transition: 0.1s ease-out;
-  transition: 0.1s ease-out;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-/* line 261, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 #send:hover {
   background-color: #d1ecff;
 }
-/* line 264, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 #send:active {
   background-color: #1297ff;
   color: white;
+}
+
+/* line 271, ../sass/screen.scss */
+.blackout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  background-color: black;
+  z-index: 100;
+}
+
+/* line 280, ../sass/screen.scss */
+.modal {
+  font-size: 20px;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 101;
+  line-height: 2.6rem;
+  height: 25px;
+  width: 320px;
+  margin-left: -160px;
+  margin-top: -12px;
+  color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }

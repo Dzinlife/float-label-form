@@ -93,25 +93,25 @@ $(document).ready(function() {
 		}
 	}
 
-	$("#form-name").blur(function(){
-		validate.name();
-	});
+	// $("#form-name").blur(function(){
+	// 	validate.name();
+	// });
 
-	$("#form-phone").blur(function(){
-		validate.phone();
-	});
+	// $("#form-phone").blur(function(){
+	// 	validate.phone();
+	// });
 
-	$("#form-email").blur(function(){
-		validate.email();
-	});
+	// $("#form-email").blur(function(){
+	// 	validate.email();
+	// });
 
-	$("#form-order-number").blur(function(){
-		validate.number();	
-	});
+	// $("#form-order-number").blur(function(){
+	// 	validate.number();	
+	// });
 
-	$("#form-reason").blur(function(){
-		validate.reason();
-	});
+	// $("#form-reason").blur(function(){
+	// 	validate.reason();
+	// });
 
 	$(".form-wrapper").submit(function(e){
 		var formValidateResault = true;
@@ -126,7 +126,9 @@ $(document).ready(function() {
 				url: "127.0.0.1:8000",
 				data : $(this).serializeArray(),
 			}).done(function () {
-				alert("done");
+				var modal = '<div class="modal">您的售后申请已提交，<br>我们将在第一时间与您联系。</div>',
+				blackout='<div class="blackout"></div>';
+				$("body").prepend(blackout).hide().fadeIn().append(modal);
 			});
 		}
 		e.preventDefault();
